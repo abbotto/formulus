@@ -1,0 +1,38 @@
+{
+  "name": "formulus",
+  "version": "1.0.0",
+  "description": "Cross-browser form styles",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abbotto/formulus.git"
+  },
+  "keywords": [
+    "forms",
+    "html5",
+    "scss",
+    "css",
+    "browser"
+  ],
+  "author": "Jared Abbott",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/abbotto/formulus/issues"
+  },
+  "homepage": "https://github.com/abbotto/formulus#readme",
+  "devDependencies": {
+    "fs": "0.0.1-security",
+    "glob-concat": "^1.0.1",
+    "gulp": "^3.9.1",
+    "node-sass": "^4.5.0",
+    "postcss": "^5.2.14",
+    "shelljs": "^0.7.6",
+    "stylefmt": "^5.1.2",
+    "stylelint": "^7.8.0"
+  },
+  "dependencies": {
+    "font-awesome": "^4.7.0"
+  }
+}

@@ -1,0 +1,116 @@
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>App</title>
+		
+		<!-- Styles -->
+		<link rel="stylesheet" type="text/css" href="formulus.min.css" />
+		
+		<!-- HTML5: true -->
+		<base href="/">
+	</head>
+
+	<body>
+		<form>
+		<h1>Register for Guitar Lessons</h1>
+		<fieldset> 
+			<legend>Personal details</legend> 
+			<section> 
+				<label>First Name</label>
+				<input id="given-name" name="given-name" type="text" placeholder="First name only" required autofocus> 
+			</section>
+			<section> 
+				<label>Last Name</label>
+				<input id="family-name" name="family-name" type="text" placeholder="Last name only" required autofocus> 
+			</section>
+			<section> 
+				<label>Date of Birth</label>
+				<input id="dob" name="dob" type="date" required>
+			</section> 
+			<section> 
+				<label>Email</label> 
+				<input id="email" name="email" type="email" placeholder="example@domain.com" required>
+			</section> 
+			<section> 
+				<label>URL</label>
+				<input id="url" name="url" type="url" placeholder="http://mysite.com">
+			</section>    
+			<section> 
+				<label>Telephone</label>  
+				<input id="phone" name="phone" type="tel" placeholder="Eg. +447000 000000" required>
+			</section> 
+			<section>
+				<label>Shoesize</label>
+				<input id="shoes" name="shoes" type="number" min="5" max="18" step="0.5" value="9">
+			</section>
+			<section>
+				<label>Guitar Skill level (1 low - 100 high)</label>
+				<input id="skill" name="skill" type="range" min="1" max="100" value="0">
+				<output name="output" onforminput="value=a.value">0</output>
+			</section>
+		</fieldset>
+		<fieldset> 
+			<legend>Billing address</legend> 
+			<section> 
+				<label>Address</label>
+				<textarea id="address" name="address" rows=5 required></textarea>
+			</section> 
+			<section> 
+				<label>Post code</label>
+				<input id="postCode" name="postCode" type="text" required>
+			</section> 
+			<section> 
+				<label>Country</label> 
+				<input id="country" name="country" list="country-names" type="text" required> 
+				<datalist id="country-names"> 
+					<option label="England" value="England"></option> 
+					<option label="Northern Ireland" value="Northern Ireland"></option> 
+					<option label="Ireland" value="Ireland"></option> 
+					<option label="Scotland" value="Scotland"></option> 
+					<option label="Wales" value="Wales"></option> 
+				</datalist>
+			</section> 
+		</fieldset> 
+		<fieldset> 
+			<fieldset> 
+				<legend>Card details</legend> 
+				<section> 
+					<label>Name</label>
+					<input id="cardName" name="cardName" type="text" placeholder="Name as it appears on your card" required>
+				</section>
+				<section> 
+					<label>Card number</label> 
+					<input id="cardNo" name="cardNo" type="number" required title="The sixteen digit number across the middle of your card."> 
+				</section>
+				<section> 
+					<label>Security code</label>
+					<input id="security" name="security" type="number" required pattern="[0-9]{3}" title="The last three digits on the back of your card.">
+				</section>
+				<section> 
+					<label>Expiry Date</label>
+					<input id="expiry" name="expiry" type="month">
+				</section>
+			</fieldset>
+			<legend>Credit Card</legend> 
+			<fieldset> 
+				<legend>Card type</legend> 
+				<section class="card-type"> 
+					<input id="visa" name="cardtype" type="radio"> 
+					<label for="visa">VISA</label>
+					
+					<input id="mastercard" name="cardtype" type="radio">
+					<label for="mastercard">Mastercard</label>
+					
+					<input id="amex" name="cardtype" type="radio"> 
+					<label for="amex">AMEX</label>
+				</section> 
+			</fieldset>
+		</fieldset> 
+		<fieldset> 
+			<section> 
+				<button type=submit>Place Order</button> 
+			</section> 
+		</fieldset> 
+		</form> 
+	</body>
+</html>

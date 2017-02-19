@@ -1,0 +1,211 @@
+@import url('http://fonts.googleapis.com/css?family=Open+Sans');
+@import url('../node_modules/font-awesome/css/font-awesome.min.css');
+
+$default-border: 1px solid rgba(0, 0, 0, 0.15) !default;
+$white: rgba(255, 255, 255, 1) !default;
+
+form {
+	font-family: "Open Sans", "Segoe UI", Tahoma, sans-serif;
+	font-size: 1em;
+	
+	fieldset {
+		border: $default-border;
+		background: #f2f2f2;
+	}
+	
+	fieldset fieldset {
+		display: block;
+		float: left;
+		background-color: $white;
+	}
+	
+	// Remove 'x' form inputs in IE
+	// http://stackoverflow.com/questions/14007655/remove-ie10s-clear-field-x-button-on-certain-inputs
+	::-ms-clear,
+	::-ms-reveal {
+		display: none;
+		height: 0;
+		width: 0;
+	}
+
+	.block {
+		border-radius: 4px;
+		padding: 1rem;
+		background: $white;
+		border: $default-border;
+	}
+
+	.icon {
+		text-decoration: none;
+		margin-left: 0.4rem;
+		&::before {
+			position: relative;
+			left: -0.4rem;
+			font-family: "FontAwesome";
+		}
+	}
+
+	section {
+		// @extend div;
+		display: block;
+	}
+
+	label {
+		display: block;
+		min-width: 12rem !important;
+		margin-top: 1rem;
+	}
+
+	button {
+		@extend .block;
+		@extend .icon;
+		padding: 0;
+		height: 3rem;
+		font-size: 1em;
+		border: $default-border;
+		text-transform: none !important;
+		transition: all 0.05s ease-in;
+		position: relative;
+		overflow: hidden;
+	}
+
+	button,
+	input[type=button],
+	input[type=number],
+	input[type=search],
+	input[type=email],
+	input[type=text],
+	input[name],
+	input[type=tel],
+	input[type=url],
+	input[type=date],
+	input[type=password],
+	select {
+		height: 2rem !important;
+		font-size: 0.9em;
+		border-radius: 4px !important;
+		margin-bottom: 1rem;
+		min-width: 16rem;
+		padding: 0 4px 0 4px;
+	}
+
+	.select {
+		background: #fff;
+		border: 1px solid rgba(0, 0, 0, 0.2);
+		border-radius: 4px !important;
+		height: 3rem;
+		margin: 0 0 1.5rem;
+		display: inline-block;
+		width: 100%;
+		select::-ms-expand {
+			display: none;
+		}
+
+		select {
+			margin: 0 !important;
+			padding: 10px;
+			box-shadow: none !important;
+			font-weight: normal;
+			height: auto;
+			background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAQAAADYWf5HAAAAkUlEQVQoz7XSrQ2AQAyG4cNAQsIUOGbAMAYS8So0e8AA7IFiESQegSFgirkQQu5HkGvtk6b9UqWCFik9sZ91XLQ+VLAiLOQuFDEiCMJAZGcVm2Y7pQ1lzBoJwkRiZg0nx9Mn9a/E6s+0xswSptduM5ltXsmu0Ublym3QbHTkphQ5C8JK4Tuk5aLz3xvTk4b9whs19lwNkZUdPAAAAABJRU5ErkJggg==') 99% 47% no-repeat;
+		}
+	}
+
+	select {
+		position: relative;
+		color: rgba(0, 0, 0, 0.4) !important;
+		font-weight: bolder;
+		//Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
+		border-radius: 0 !important;
+		border: none !important;
+		-webkit-border-radius: 0px !important;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+	}
+
+	select::after {
+		position: absolute;
+		background: #888;
+		width: 50px;
+		height: 50px;
+		border: 1px solid #444;
+		z-index: 30;
+	}
+
+	input,
+	textarea {
+		font-weight: 300 !important;
+	}
+
+	textarea {
+		font-size: 1em;
+		min-width: 16rem;
+	}
+
+	input[type="text"],
+	input[type="password"],
+	datepicker > input,
+	datepicker > input {
+		height: 2rem !important;
+	}
+
+	input:required,
+	.select select:required {
+		background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAjVBMVEUAAABVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVUErDHsAAAALnRSTlMAAQIDBAUGBwsQEhMbJCYoLTI6QkdMTlRdZmdwfICCi5egsLy+wcfi6PHz9ff9F3DAtwAAAHlJREFUGBlVwQUSwjAAAMEL7u4uQQr0/v88is2UXT5muiXvqPLTaUBUodYLwEA3lagWF6lz4KreE/WqpmU4mXMpQJg+/FmWeKknfrR561/8SkYB2JtzDnAzk6qpmSpM9NCMam2nazLDLkQVWuMCX1Elb6UH/jSagbcnH28Xd5qux84AAAAASUVORK5CYII=);
+		background-repeat: no-repeat;
+		background-position: 98% 50%;
+	}
+
+	input[readonly],
+	.select select[readonly] {
+		background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAclBMVEUAAABVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVXZdJ2oAAAAJXRSTlMAAQIFCRESFR0gIy0wMUNVVlx1fIWLlKqrrbK1vL7Hyszk7/P9z4BxiAAAAGVJREFUGFe1yFsCgVAYAOHhuF/qdxdSZPa/RQ9RNmDe5gNgmFdNmQ34lipVz52crOej5cPt56c+EzDR1ELmDoCrixZyA4C9qxaigzUAs8IiIiLuHscAjX0XgJ+3/AfcAA79vzbwBmCxFDrhdWvkAAAAAElFTkSuQmCC) !important;
+		background-repeat: no-repeat !important;
+		background-position: 98% 50% !important;
+	}
+
+	// Font-Awesome form controls
+	input[type="checkbox"],
+	input[type="radio"] {
+		visibility: hidden;
+		display: none;
+	}
+
+	input[type="checkbox"] + label,
+	label + input[type="checkbox"] {
+		margin-top: 0;
+		margin-bottom: 0;
+		@extend .icon;
+		cursor: pointer;
+		&::before {
+			content: "\f096";
+		}
+	}
+
+	input[type="checkbox"]:checked + label,
+	label + input[type="checkbox"]:checked {
+		cursor: pointer;
+		&::before {
+			content: "\f046";
+		}
+	}
+
+	input[type="radio"] + label,
+	label + input[type="radio"] {
+		margin-top: 0;
+		margin-bottom: 0;
+		cursor: pointer;
+		@extend .icon;
+		&::before {
+			content: "\f10c";
+		}
+	}
+
+	input[type="radio"]:checked + label,
+	label + input[type="radio"]:checked {
+		cursor: pointer;
+		&::before {
+			content: "\f192";
+		}
+	}
+}
