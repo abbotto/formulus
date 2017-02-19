@@ -4,7 +4,6 @@ const sh = require("shelljs");
 const fs = require("fs");
 const finder = require("glob-concat");
 
-const html = "src/index.html";
 const tmpCSS = "tmp/formulus.tmp.scss";
 const inputSCSS = "src/formulus.scss";
 const outputCSS = "dist/formulus.min.css";
@@ -16,7 +15,6 @@ sh.exec("mkdir ./dist/fonts/");
 sh.exec("mkdir ./tmp/");
 sh.exec("touch " + tmpCSS);
 sh.exec("touch " + outputCSS);
-sh.exec("cp " + html + " ./dist/");
 // sh.exec("node_modules/stylefmt/bin/cli.js " + inputSCSS + " " + tmpCSS);
 // sh.exec("node_modules/stylelint/bin/stylelint.js src/**/*.scss");
 sh.exec("node task/font.copy.js");
