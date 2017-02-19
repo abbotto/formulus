@@ -26,6 +26,10 @@
 !/src
 !/src/**/*
 
+# Whitelist Dist
+!/dist
+!/dist/**/*
+
 # Whitelist Readme Files
 !/readme
 !/readme/**/*
